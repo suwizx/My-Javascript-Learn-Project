@@ -1,1 +1,1 @@
-# My-JavaScrip-Learn-Project
+# My JavaScript Learn Project
