@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hours <input id="hour" type="text"><br>
+    Min <input id="min" type="text"><br>
+    Sec <input id="sec" type="text">
+    <button onclick="eventc()">Submit</button>
+    <p id="ans"></p>
+    <script>
+        function eventc(){
+            let hour = Number(document.getElementById('hour').value)
+            let min = Number(document.getElementById('min').value)
+            let sec = Number(document.getElementById('sec').value)
+            let ans = (hour*60*60)+(min*60)+sec
+            console.log(ans)
+            document.getElementById('ans').innerHTML = ans+' seconds'
+        }
+    </script>
+</body>
+</html>

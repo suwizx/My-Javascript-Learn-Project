@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="text">
+    <button id="submit" onclick="eventc()">Submit</button>
+    <p id="output"></p>
+    <p id="ans"></p>
+    <p id="out2"></p>
+    <script>
+        let arr = []
+
+        function odd(){
+            
+            let l = arr.length
+            let odd = []
+            for (let i = 0 ; i< l;i++){
+                    if(Number(arr[i])%2==1){
+                    console.log(Number(arr[i]))
+                    odd.push(Number(arr[i]))
+                    document.getElementById('ans').innerHTML = 'Odd number is ' + odd
+                }
+        }
+    }
+
+        function even(){
+            
+            let l = arr.length
+            let even = []
+            for (let i = 0 ; i< l;i++){
+                    if(Number(arr[i])%2==0){
+                    console.log(Number(arr[i]))
+                    even.push(Number(arr[i]))
+                    document.getElementById('out2').innerHTML = 'Even number ' + even
+                }
+        }
+    }
+
+        function eventc(){
+            let sum = 0
+            let p = document.getElementById('output')
+            let ans = document.getElementById('ans')
+            let num = document.getElementById('input').value
+            if(num==0){
+                    even()
+                    odd()
+                }
+            arr.push(num)
+            p.innerHTML = arr
+            let l = arr.length
+            
+                
+            }
+        
+    </script>
+</body>
+</html>

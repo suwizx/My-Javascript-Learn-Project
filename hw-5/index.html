@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="input">
+    <button id="submit" onclick="cevent()">Submit</button>
+    <p id="time"></p>
+</body>
+<script>
+    function cevent(){
+        let data = document.getElementById('input').value
+        let sec = data%60
+        let jmin = Math.floor(data/60)
+        let hour = Math.floor(jmin/60)
+        let fmin = jmin-(hour*60)
+        console.log(sec)
+        console.log(fmin)
+        console.log(hour)
+        document.getElementById('time').innerHTML = hour+' hours : '+fmin+' minutes : '+sec+' seconds'
+    }
+</script>
+</html>
